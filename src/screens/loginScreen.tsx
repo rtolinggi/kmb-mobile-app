@@ -50,7 +50,7 @@ export default function LoginScreen({navigation}: Props) {
   });
 
   function createTwoButtonAlert(msg: string) {
-    return Alert.alert('Credential Tidak Cocok', msg, [
+    return Alert.alert('Invalid Credential', msg, [
       {text: 'OK', style: 'cancel'},
     ]);
   }
@@ -66,7 +66,7 @@ export default function LoginScreen({navigation}: Props) {
       if (data.data.user) {
         return;
       }
-      createTwoButtonAlert(data.error?.message as string);
+      createTwoButtonAlert('email atau password tidak cocok');
     },
     onError: () => createTwoButtonAlert('Terjadi gangguan di server'),
   });

@@ -51,11 +51,11 @@ export const MainStack = () => {
       />
       <Tab.Screen
         options={{
+          title: 'Pengaturan',
           tabBarLabel: 'Pengaturan',
           tabBarIcon: ({color}) => (
             <ProfileIcon name="user-cog" size={20} color={color} />
           ),
-          headerShown: false,
         }}
         name="ProfileScreen"
         component={ProfileScreen}
